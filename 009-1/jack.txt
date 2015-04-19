@@ -39,7 +39,7 @@
     if (@Q_Forestbow > 1) goto L_Bow_state_2;
 
     mes "[Jack Lumber]";
-    mes "\"Hello there! My name is Jack Lumber, the enemy of all trees. If you need some firewood, just let me know.\"";
+    mes "\Hallo, mein Name ist Jack Lumber, der Feind aller Bäume.  Wenn du etwas Feuerholz brauchst, lass es mich wissen.\"";
     if (@inspector == 1)
         goto L_NohMask_Ask;
     goto L_NotInspector;
@@ -48,66 +48,66 @@ L_NotInspector:
     next;
     if (@Q_Forestbow < 1)
         goto L_Close;
-    mes "I heard you aren't delivering any more living wood. Why not?";
+    mes "Ich habe gehört, dass du kein lebendes Holz mehr auslieferst. Warum denn nicht?";
     next;
     goto L_Next;
 
 L_Next:
     mes "[Jack Lumber]";
-    mes "\"Why not?! I value my life, that's why!.\"";
+    mes "\"Warum nicht? Ich schätze mein Leben, deshalb!\"";
     next;
     menu
-        "What do you mean?", L_Next1;
+        "Was meinst du damit?", L_Next1;
 
 L_Next1:
     mes "[Jack Lumber]";
-    mes "\"A week ago, I was going to chop down one of those twigleaf trees in the forest to the southwest – these twigleafs are the trees that give me the living wood you speak of. I was just chopping away with my axe, and guess what happened? One of its branches hit me! At first, I thought it fell down or the wind blew it, but it hurt! After I shook it off and struck the tree again with my axe, another branch hit me! I got angry and started to chop off all the low-hanging branches so this couldn't happen anymore. Even after all that though, I still can't believe what happened next.\"";
+    mes "\"Vor einer Woche wollte ich einen dieser Laubzweigbäume fällen im südwestlichen Wald. Diese Laubzweige sind die Bäume, welche mir das lebende Holz gegeben haben, von dem du gesprochen hast. Ich war gerade mit dem Hacken fertig, entfernte meine Axt und was passierte? Einer ihrer Zweige traf mich! Ich dachte mir, er fiel von selbst herunter oder der Wind war es. Es schmerzte! Ich schüttelte sie von mir und schlug wieder mit der Axt zu und noch ein Zweig traf mich! Ich wurde wütend und beschloss, alle Zweige abzuhacken in der Umbebung, sodass es nicht mehr vorkommen konnte. Aber ich konnte nicht glauben, was dann geschah.\"";
     next;
     menu
-        "What happened? ", L_Next2;
+        "Was ist passiert? ", L_Next2;
 
 L_Next2:
     mes "[Jack Lumber]";
-    mes "\"You'll think I'm insane if I tell you...\"";
+    mes "\"Du hälst mich für wahnsinnig, wenn ich dir das erzähle.\"";
     next;
     menu
-        "I won't. I promise.", L_Next3;
+        "Werde ich nicht. Versprochen.", L_Next3;
 
 L_Next3:
     mes "[Jack Lumber]";
-    mes "\"Alright, well... After I chopped off a few branches, the whole tree started to move! Its roots tore out of the earth, all the branches started to wave around, and a face appeared on the trunk. The whole tree CAME TO LIFE! It was mad!\"";
+    mes "\"OK. Nachdem ich ein paar Zweige abgehackt hatte, begann sich der ganze Baum zu bewegen. Seine Wurzeln rissen sich aus der Erde, all diese Zweige schlugen wie Wellen umher und ein Gesicht erschien auf dem Stamm. Der ganze Baum begann zu leben! Es war verrückt!\"";
     next;
     menu
-        "Did you run away?", L_Next4,
-        "Did you fight it?", L_Next4;
+        "Bist du weggerannt?", L_Next4,
+        "Hast du gekämpft?", L_Next4;
 
 L_Next4:
     mes "[Jack Lumber]";
-    mes "\"I fought it, of course! I took my axe and attacked the beast! It hit me here *points at a bruise on his shoulder,* here *lifts his trouser leg to show another bruise,* and here *lifts his shirt and reveals even worse bruises.* But I didn't give up! I chopped away at it, branch after branch, and in the end I chopped off its roots, and it fell to the ground – motionless.\"";
+    mes "\"Ich kämpfte, natürlich! Ich griff meine Axt und attakierte das Biest! Es traf mich hier *zeigt auf eine Prellung an seiner Schulter*, hier *hebt sein Hosenbein um die andere Prellung zu zeigen* und hier *hebt sein Hemd und zeigt einige noch schlimmere Prellungen*. Aber ich gab nicht auf. Ich hackte sie alle weg, Zweig für Zweig und am Ende traf ich seine Wurzeln, und er fiel zu Boden, regungslos.\"";
     next;
     menu
-        "So you beat the monster? Then why are you so scared?", L_Next5;
+        "Du hast also gewonnen? Warum bist du dann so ängstlich?", L_Next5;
 
 L_Next5:
     mes "[Jack Lumber]";
-    mes "\"Well, I was exhausted and had to rest. A few minutes passed, and suddenly I was practically surrounded by a dozen or more of these living trees!\"";
+    mes "\"Naja, ich war erschöpft und ruhte mich aus. Einige Minuten vergingen und plötzlich wurde ich von einem Dutzend oder mehr dieser lebenden Bäume umgeben!\"";
     next;
     menu
-        "Did you fight them too? ", L_Next6;
+        "Hast du die auch bekämpft? ", L_Next6;
 
 L_Next6:
     mes "[Jack Lumber]";
-    mes "\"Are you crazy? I barely destroyed one of those beasts; I was in no shape to fight again! I ran away as fast as I could, and lucky for me the monsters aren't that fast on their tiny root legs. Ha!\"";
+    mes "\"Bist du verrückt? Ich zerstörte kaum eines dieser Biester. Ich war nicht in der Form weiter zu kämpfen. Ich rannte so schnell ich konnte. Glück für mich, dass die Monster sind nicht so schnell auf ihren kleinen Holzbeinen sind. Ha!\"";
     next;
     menu
-        "So, I guess you aren't chopping down trees anymore?", L_Next7;
+        "Du fällst also keine Bäume mehr?", L_Next7;
 
 L_Next7:
     mes "[Jack Lumber]";
-    mes "\"I still do; it's my job. But I'll no longer chop those twigleafs – I'll tell you that. I know the bow master wants some twigleaf wood, but I don't care. I won't risk MY life for a few gold pieces! If you really want to, just go to the southwest, but I  can't help you. I won't go there ever again.\"";
+    mes "\"Doch, das mache ich. Es ist mein Job. Aber ich schneide nicht länger diese Laubzweige, von denen ich erzähle. Ich weiß, der Bogenbauer will dieses Holz von ihnen, aber das ist nicht meine Sorge. Ich will nicht mein Leben riskieren für ein paar Goldstücke. Wenn du das willst, nur nach Südwesten gehen. Aber ich will niemals wieder dort hin.\"";
     next;
     menu
-        "Southwest you say? OK, thank you.", L_Next8;
+        "Südwestlich sagtest du? OK, Danke dir.", L_Next8;
 
 L_Next8:
     set @Q_Forestbow, 2;
@@ -118,33 +118,33 @@ L_Bow_state_2:
     // Bow state 4: The player has found a perfect piece of wood.
     if (@Q_Forestbow > 3) goto L_Bow_state_4;
 
-    mes "\"Good luck hunting those tree monsters – you'll need it.\"";
+    mes "\"Viel Glück beim Jagen dieser Monster - du wirst es brauchen.\"";
     if (@inspector != 1)
         goto L_Close;
     goto L_NohMask_Ask;
 
 L_Bow_state_4:
     mes "[Jack Lumber]";
-    mes "\"You've finally found that perfect piece of living wood that Alan needs to make a Forest Bow, haven't you?\"";
+    mes "\"Du hast endlich das perfekte Stück lebendes Holz gefunden, das Alan braucht, um den Waldbogen herzustellen, nicht wahr?\"";
     next;
     menu
-        "I couldn't afford the bow, though...", L_Shield_state_0,
-        "No, I'm still looking.", L_Bow_state_4_reaffirm,
-        "Yes, I've got the Forest bow now.", L_Next9,
-        "I'm a melee warrior, I don't need bows.", L_Shield_state_0;
+        "Ich konnte den Bogen noch nicht erschwingen...", L_Shield_state_0,
+        "Nein ich schau noch danach.", L_Bow_state_4_reaffirm,
+        "Ja, ich habe den Waldbogen jetzt.", L_Next9,
+        "Ich bin ein Nahkampfkrieger, ich brauche keinen Bogen.", L_Shield_state_0;
 
 L_Next9:
     // Check if the player tells the truth (continue on in any case)
     if (@Q_Forestbow > 4) goto L_Shield_state_0;
 
     mes "[Jack Lumber]";
-    mes "\"Hrmph. I'm someone who respects those speaking the truth.\"";
+    mes "\"Hrmph. Ich bin einer, der die Wahrheit zu sagen pflegt.\"";
     next;
     goto L_Shield_state_0;
 
 L_Bow_state_4_reaffirm:
     mes "[Jack Lumber]";
-    mes "\"You should go talk to Alan again.\"";
+    mes "\"Du solltest noch einmal mit Alan sprechen.\"";
     goto L_Close;
 
 L_Shield_state_0:
@@ -152,31 +152,31 @@ L_Shield_state_0:
     callsub S_Update_Mask;
 
     if (Sex == 0)
-        set @child_of_jack$, "daughter";
+        set @child_of_jack$, "meine eigene Tochter";
     if (Sex == 1)
-        set @child_of_jack$, "son";
+        set @child_of_jack$, "mein eigener Sohn";
 
     mes "[Jack Lumber]";
-    mes "\"You no doubt remember how I struggled with those beasts, fighting for my life. Scared me, those seven-branched little stumps did!  Never since that day have I strayed near them, and yet there you are, cutting them down one by one. I'm proud of you – to dare to fight those trunks is admirable indeed. You're as strong as if you were my own " + @child_of_jack$ + "!\"";
+    mes "\"Du scheinst dich nicht daran zu erinnern, wie ich mit diesen Biestern zutun hatte, kämpfend um mein Leben. Sie machten mir Angst, diese siebenzweigigen kleinen Schlümpfe! Noch nie, seit dem Tag, bin ich in die Nähe von ihnen gewesen. Und da kommst du und fällst sie alle einen nach dem anderen. Ich bin stolz auf dich, dass du es wagst, gegen diese Stämme zu kämpfen. Du bist stark als währst du  " + @child_of_jack$ + "!\"";
     next;
     goto L_Shield_state_1;
 
 L_Shield_state_1:
     mes "[Jack Lumber]";
-    mes "\"I have an idea. What would you say about a new shield?\"";
+    mes "\"Ich habe eine Idee. Was würdest du über ein neues Schild sagen?\"";
     next;
     if (@inspector == 1)
         menu
-            "No thanks.", L_Close,
-            "Yes, please!", L_Yes,
-            "Actually, I'd like to know if you've seen any strange happenings in town.", L_NohMask_Answer;
+            "Nein, Danke.", L_Close,
+            "Ja bitte!", L_Yes,
+            "Eigentlich möchte ich wissen, ob du seltsame Geschehnisse in der Stadt gesehen hast.", L_NohMask_Answer;
     menu
-        "No thanks.", L_Close,
-        "Yes, please!", L_Yes;
+        "Nein, Danke.", L_Close,
+        "Ja bitte!", L_Yes;
 
 L_Yes:
     mes "[Jack Lumber]";
-    mes "\"All I need is " + @RAWLOGS_AMOUNT + " raw logs. This needn't be high quality wood; pretty much any log you can find should work. Oh, and I'll also need " + @SHIELD_COST + " GP for other materials.\"";
+    mes "\"Alles was ich brauche ist " + @RAWLOGS_AMOUNT + " [Holzstück].  Es muss nicht die höhste Qualität des Holzes sein, einfach jedes Holz sollte funktionieren. Oh, und ich brauche auch " + @SHIELD_COST + " € für anderes Material.\"";
     next;
     set @Q_Woodenshield, 2;
     callsub S_Update_Mask;
@@ -184,10 +184,10 @@ L_Yes:
 
 L_Shield_state_2:
     mes "[Jack Lumber]";
-    mes "\"Do you have the " + @RAWLOGS_AMOUNT + " raw logs and " + @SHIELD_COST + " GP for the shield?\"";
+    mes "\"Lass' mich sehen, ob du genug von allem hast.\"";
     menu
-        "Here it is.", L_Next10,
-        "I'll come back later.", L_Close;
+        "Hier sind die sachen...", L_Next10,
+        "Ich komme später noch einmal vorbei...", L_Close;
 
 L_Next10:
     if (countitem("RawLog") < @RAWLOGS_AMOUNT)
@@ -204,67 +204,67 @@ L_Next10:
     set @Q_Woodenshield, 3;
     callsub S_Update_Mask;
     mes "[Jack Lumber]";
-    mes "\"Have a seat.\"";
-    mes "Jack saws the logs into pieces and then sands them until they are smooth to the touch.";
-    mes "Applying some strong-smelling liquid, he tans them to a darker hue.";
+    mes "\"Setz dich.\"";
+    mes "Jack sägt die Hölzer in Stücke, dann schleift er sie, bis sie sich glatt anfühlen.";
+    mes "Die Anwendung einer stark riechenden Flüssigkeit färbt sie schließlich dunkel.";
     next;
     mes "[Jack Lumber]";
-    mes "Grabbing one of two leftover pieces, he begins to carve it into a round shape, then repeats this with the second piece – shield handles from what you can tell.";
+    mes "Er greift sich eins der zwei übrig bebliebenen Stücke und beginnt es in eine runde Form zu schnitzen, dann wiederholt er dies mit dem zweitem Stück - Schildgriffe, wie sie für dich aussehen.";
     next;
     mes "[Jack Lumber]";
-    mes "Meanwhile, the sun has dried the other pieces. Jack places them next to each other, adds a frame, and nails everything together.";
-    mes "The resulting shield looks usable already, but Jack applies another liquid to it and leaves it to dry for a few moments.";
+    mes "Inzwischen hat die Sonne die anderen Stücke getrocknet. Jack legt sie nebeneinander, fügt einen Rahmen und Nägel zusammen.";
+    mes "Das daraus resultierende Schild sieht bereits fertig aus, aber Jack gibt eine andere Flüssigkeit zu und ülässt es für ein paar Augenblicke trocknen.";
     next;
     mes "[Jack Lumber]";
-    mes "Finally, he hands the shield to you.";
-    mes "\"Enjoy your new shield!\"";
+    mes "Schließlich gibt er dir das Schild.";
+    mes "\"Genieß' dein neues Schild!\"";
     mes "[" + @QUEST_SHIELD_EXP + " experience points]";
     next;
     goto L_Close;
 
 L_Not_enough_logs:
     mes "[Jack Lumber]";
-    mes "\"You don't have enough wood for me to craft this shield; I need a total of " + @RAWLOGS_AMOUNT + " raw logs.\"";
+    mes "\"Du hast nicht genug Holz für das Schild. Für das Handwerk brauche ich insgesammt  " + @RAWLOGS_AMOUNT + " [Holzstück].\"";
     goto L_Close;
 
 L_not_enough_money:
     mes "[Jack Lumber]";
-    mes "\"I'm afraid that you don't have enough gold. I need " + @SHIELD_COST + " GP to finish your shield.\"";
+    mes "\"Du hast nicht genug Geld. Ich brauche " + @SHIELD_COST + "€, um deinen Schild fertigzustellen.\"";
     goto L_Close;
 
 L_TooMany:
     mes "[Jack Lumber]";
-    mes "\"You don't have enough room to carry the shield. Come back when you do.\"";
+    mes "\"Du hast nicht genug Platz für das Schild. Komm wieder, wenn du es auch mitnehmen kannst.\"";
     goto L_Close;
 
 L_Shield_state_3:
     mes "[Jack Lumber]";
-    mes "\"I hope that my shield will serve you well!\"";
+    mes "\"Ich hoffe, dass mein Schild dir gute Dienste leisten wird!\"";
     next;
     if (@inspector != 1)
         goto L_Made_Shield;
     menu
-        "Me too.", L_Made_Shield,
-        "Have you seen anything that might be connected to the recent robberies in town?", L_NohMask_Answer;
+        "Ich auch.", L_Made_Shield,
+        "Hast du etwas gesehen, dass mit den jüngsten Diebstählen in der Stadt in Verbindung stehen könnte?", L_NohMask_Answer;
 
 L_NohMask_Ask:
     menu
-        "I'll keep that in mind.", L_Close,
-        "I heard you aren't delivering any more living wood. Why not?", L_Next,
-        "Have you seen anything that might be connected to the recent robberies in town?", L_NohMask_Answer;
+        "Ich behalte es im Auge.", L_Close,
+        "Ich habe gehört, dass du kein lebendes Holz mehr auslieferst. Warum denn nicht?", L_Next,
+        "Hast du etwas gesehen, dass mit den jüngsten Diebstöhle in der Stadt in Verbindung stehen könnte?", L_NohMask_Answer;
 
 L_NohMask_Answer:
     mes "[Jack Lumber]";
-    mes "\"Sorry, no.\"";
+    mes "\"Tut mir leid, nein.\"";
     goto L_Close;
 
 L_Made_Shield:
     next;
     mes "[Jack Lumber]";
-    mes "\"Speaking of that shield...\"";
-    mes "\"It has put me behind on all these new Nivalis orders, now that the ship is running there.\"";
+    mes "\"Apropos Schild ...\"";
+    mes "\"Es hat mich in den ganzen Nivalis bestellungen völlig zurück geworfen, gerade jetzt wo dass Schiff bald ausläuft.\"";
     next;
-    mes "\"Care to help out? I'll pay you for your time.\"";
+    mes "\"Würdest du mir mit den bestellungen helfen? Ich werde dich auch für deine Arbeit entlohnen.\"";
     goto L_Daily;
 
 L_Daily:
@@ -281,7 +281,7 @@ L_Daily:
     next;
 
     mes "[Jack Lumber]";
-    mes "\"Check back with me tomorrow, and I'll let you know if I need any help with that shipment.\"";
+    mes "\"Komm morgen wieder, ich lasse dich wissen falls ich Hilfe mit dem Versand benötige.\"";
 
     goto L_Close;
 
