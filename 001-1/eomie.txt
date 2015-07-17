@@ -33,23 +33,23 @@
     if (@state == 8) goto L_GetStuff;
 
     mes "[Eomie]";
-    mes "\"I maintain this little spot of grass in the desert.\"";
+    mes "\"Ich pflege dieses Fleckchen Gras in der Wüste.\"";
     if (@state != 7)
         goto L_Close;
     menu
-        "I have this magic fertilizer from Tinris and need a spell cast on it.",L_Next;
+        "Ich habe diesen magischen Dünger aus Tinris und muss einen Zauber über sie sprechen.",L_Next;
 
 L_Next:
     mes "[Eomie]";
-    mes "\"Oh? I see, that's a difficult task.";
-    mes "I'd be glad to help you, but unfortunately I can't interrupt the magic I use to keep this spot of grass alive.\"";
+    mes "\"Oh? Ich verstehe, das ist eine schwierige Aufgabe.";
+    mes "Ich würde mich freuen, dir zu helfen, aber leider kann ich die Magie nicht unterbrechen, die ich nutze, um diesen Flecken Gras am Leben zu halten.\"";
     next;
-    mes "\"It's unusually hot at the moment, even for this desert area. It might have something to do with the aftereffects of the earthquake.\"";
+    mes "\"Es ist ungewöhnlich heiß im Moment, selbst für dieses Wüstengebiet. Das könnte etwas mit den Nachwirkungen des Erdbebens zu tun haben.\"";
     menu
-        "Isn't there any possibility?",L_Continue;
+        "Gibt es keine Möglichkeit?",L_Continue;
 
 L_Continue:
-    mes "She hesitates.";
+    mes "Sie zögert.";
     set @state, 8;
     callsub S_Update_Mask;
     goto L_GetStuff;
@@ -57,13 +57,13 @@ L_Continue:
 L_GetStuff:
     // @state == 8
     mes "[Eomie]";
-    mes "\"I could try to interrupt my spells to be able to cast the spell on the fertilizer, but then I need to prepare the grass for this.";
-    mes "Bring me " + @grass_amount + " Grass Seeds, " + @water_amount + " Bottles of Water and " + @ice_amount + " Ice Cubes.\"";
+    mes "\"Ich könnte versuchen, meine Zauber zu unterbrechen, um den Zauber auf den Dünger zu legen, aber dann muss ich das Gras darauf vorbereiten.";
+    mes "Bring mir " + @grass_amount + " Grassamen, " + @water_amount + " Wasserflaschen und " + @ice_amount + " Eiswürfel.\"";
     menu
-        "I have it.",L_More,
-        "Where can I get Grass Seeds?",L_Hurnscald,
-        "How can I get Ice Cubes? We're in the desert!",L_Mine,
-        "Ok, I'll go and get it.",L_Close;
+        "Ich habe alles.",L_More,
+        "Wo bekomme ich die Grassamen?",L_Hurnscald,
+        "Wie bekomme ich Eiswürfel? Wir sind in der Wüste!",L_Mine,
+        "Ok, ich werde alles besorgen.",L_Close;
 L_More:
     if ((countitem("GrassSeed") < @grass_amount) || (countitem("BottleOfWater") < @water_amount) || (countitem("IceCube") < @ice_amount))
         goto L_NoItem;
@@ -74,39 +74,39 @@ L_More:
     set @state, 9;
     callsub S_Update_Mask;
     mes "[Eomie]";
-    mes "\"Very good.\"";
-    mes "She takes the things you brought her and uses them to create a bubble of coolness around the spot of grass.";
+    mes "\"Sehr gut.\"";
+    mes "Sie nimmt die Dinge, die du ihr gebracht hast und nutzt sie, um eine kühle Blase um den Grasfleck zu legen.";
     misceffect sfx_magic_nature;
     next;
     mes "[Eomie]";
-    mes "\"This should last long enough to keep the spot of grass alive until I cast the spell on the fertilizer. And if some of it shrivels I still have the seeds you brought me which I can use to recover it.\"";
+    mes "\"Das sollte genügen, um den Grasfleck am Leben zu halten, bis ich den Zauber über den Dünger gesprochen habe. Und falls er schrumpft, habe die Samen, die du mir gebracht hast, um ihn wiederherzustellen.\"";
     next;
-    mes "She takes the fertilizer and casts some invocations. After a while she's done and gives it back to you with a smile.";
+    mes "Sie nimmt den Dünger und spricht einige Beschwörungen. Nach einer Weile ist sie fertig und gibt ihn dir mit einem Lächeln zurück.";
     misceffect sfx_magic_nature;
     mes "[Eomie]";
-    mes "\"This should help you. I'm glad you're taking care of the plants. Not enough people do that nowadays.\"";
+    mes "\"Dies sollte dir weiterhelfen. Ich bin froh, dass du die Pflege der Pflanzen übernommen hast. Das tun heutzutag nicht mehr genügend Leute.\"";
     goto L_Close;
 
 L_Hurnscald: // player asked how to get Grass Seeds
     mes "[Eomie]";
-    mes "\"Squirrels tend to pick up Grass Seeds as they gather food. You can find them around Hurnscald. To get there you will have to take the ferry in the harbor district.\"";
+    mes "\"Eichhörnchen heben Grassamen auf, wenn sie Futter sammeln. Du findest sie run um Hurnscald. Um dorthin zu gelangen, musst du die Fähre im Hafenviertel nehmen.\"";
     goto L_Close;
 
 L_Mine: // player asked how to get Ice Cubes
     mes "[Eomie]";
-    mes "\"Hm, that's a difficult task, indeed. Naturally you will find them on the continent of Kaizei, which is high up in the north and covered with snow most time of the year. But it might be difficult to get there.\"";
+    mes "\"Hm, das ist in der Tat eine schwierige Aufgabe. Natürlich findest du sie auf dem Kontinent Kaizei, der hoch oben im Norden liegt und die meisten Zeit des Jahres mit Schnee bedeckt ist. Aber es dürfte schwierig sein, dorthin zu gelangen.\"";
     next;
-    mes "\"I heard that Ice Goblins were seen in the caves that are around Nivalis. Maybe you can find Ice Cubes in there.\"";
+    mes "\"Ich hörte, dass Eis Goblins in den Höhlen rund um Nivalis gesehen wurden. Vielleicht wirst du dort drin Eiswürfel finden.\"";
     goto L_Close;
 
 L_CastedSpell: // @state >= 9 but below 14
     mes "[Eomie]";
-    mes "\"The grass wasn't damaged due to the interruption. I hope the magic fertilizer is useful for Anwar.\"";
+    mes "\"Das Gras wurde durch die Unterbrechung nicht beschädigt. Ich hoffe, der magische Dünger ist nützlich für Anwar.\"";
     if (@state != 13)
         goto L_Close;
     menu
-        "It was and he created this Silk Headband as a present for you.",L_Present,
-        "(Mumble something and leave)",L_Close;
+        "War er und er machte dieses Seiden Stirnband als Geschenk für dich.",L_Present,
+        "(Murmle etwas und geh)",L_Close;
 
 L_Present:
     if (countitem("SilkHeadband") < 1)
@@ -116,18 +116,18 @@ L_Present:
     set @state, 14;
     callsub S_Update_Mask;
     mes "[Eomie]";
-    mes "\"Oh, this is very friendly! Please tell him I'm very happy about it.\"";
-    mes "She smiles.";
+    mes "\"Oh, das ist sehr freundlich! Bitte sag ihm, ich bin sehr glücklich darüber.\"";
+    mes "Sie lächelt.";
     goto L_Close;
 
 L_Done: // @state >= 14
     mes "[Eomie]";
-    mes "\"Hello. I'm happy to see someone like you being dedicated to the needs of plants and people.\"";
+    mes "\"Hallo. Ich bin froh jemanden wie dich zu sehen, der sich für die Bedürfnisse der Pflanzen und Menschen engagiert.\"";
     goto L_Close;
 
 L_NoItem:
     mes "[Eomie]";
-    mes "\"Where is it?\"";
+    mes "\"Wo ist es?\"";
     goto L_Close;
 
 L_Close:
